@@ -11,8 +11,5 @@ test("Login user to Trello", async ({ page }) => {
   await logoutUser(page);
 });
 
-test("Login with a fixture", async ({ page}) => {
-  
-})
 
 

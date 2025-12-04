@@ -6,14 +6,12 @@ type MyPages = {
   loginPage: LoginPage;
   boardPage: BoardPage;
 };
-
 export const test = baseTest.extend<MyPages>({
   loginPage: async ({ page }, use) => {
     await use(new LoginPage(page));
   },
-    boardPage: async ({ page }, use) => { 
+  boardPage: async ({ page }, use) => {
     await use(new BoardPage(page));
-    }
+  },
 });
-
 export const expect = test.expect;

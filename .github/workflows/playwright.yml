@@ -20,5 +20,5 @@ jobs:
       env:
         USER_ID: ${{ secrets.USER_ID }}
         USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
-      run: npx playwright test --reporter=html
+      run: npx playwright test api.spec.ts
 

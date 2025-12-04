@@ -13,7 +13,6 @@ describe("Board tests", () => {
     await boardPage.createBoard("Test");
   });
   test.afterEach(async ({ page, boardPage }) => {
-
     await boardPage.deleteBoard();
     await logoutUser(page);
   });
@@ -23,8 +22,7 @@ describe("Board tests", () => {
   test("Create board and list in the board", async ({ page, boardPage }) => {
     const boardListName = "Test 1"
     await boardPage.boardListComponent.createList(boardListName);
-    await expect(page.getByTestId("list-name")).toHaveText(boardListName);
-    
+    await expect(page.getByTestId("list-name")).toHaveText(boardListName);  
   });
   test("Create card", async ({ page, boardPage }) => {
     const boardListName = "Test 1"
