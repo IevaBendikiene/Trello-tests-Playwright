@@ -20,5 +20,7 @@ jobs:
       env:
         USER_ID: ${{ secrets.USER_ID }}
         USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+        API_KEY: ${{ secrets.API_KEY }}
+        API_TOKEN: ${{ secrets.API_TOKEN }}
       run: npx playwright test api.spec.ts
 
